@@ -1,5 +1,5 @@
 # NMEA0183 WiFi Multiplexer with ESP8266 (D1 Mini)
-Reads NMEA0183 messages from two serial lines and forwards multiplexed messages to USB-Serial and WLAN as UDP broadcast.
+Reads NMEA0183 messages from two serial (RS232) lines and forwards multiplexed messages to USB-Serial and WLAN as UDP broadcast.
 
 ESP8266 is using Software Serial on ports D7 and D8.
 
