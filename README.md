@@ -30,5 +30,9 @@ const int udpPort = 4444;                 // UDP port
 
 KiCad files are available to change/extend and to create a PCB.
 
+## Parts
+
+- E[SP8266 (D1Mini)](https://www.reichelt.de/de/en/d1-mini-esp8266-v3-0-d1-mini-p253978.html?&nbc=1)
+
 ## Updates
 - 06.03.2021 - Version 0.1: Initial version
