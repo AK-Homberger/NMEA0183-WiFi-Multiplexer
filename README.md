@@ -5,7 +5,7 @@ ESP8266 is using Software Serial on ports D7 and D8.
 
 ![Schematics](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer/blob/main/NMEA0183-WiFi-Multiplexer.png)
 
-Just change the settings in the programm according to your needs:
+Just change the settings in the [programm](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer/blob/main/NMEA083-WiFi-Multiplexer/NMEA083-WiFi-Multiplexer.ino) according to your needs:
 
 ```
 // ------------------------------------------------------------------------
