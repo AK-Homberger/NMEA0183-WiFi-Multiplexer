@@ -33,7 +33,7 @@ const char *udpAddress = "192.168.4.255"; // Set network address for broadcast
 const int udpPort = 4444;                 // UDP port
 
 #define BaudRate1 4800   // Baud rate for serial#1
-#define BaudRate2 38400  // Baud rate for serial#1
+#define BaudRate2 38400  // Baud rate for serial#2
 
 // -------------------------------------------------------------------------
 
