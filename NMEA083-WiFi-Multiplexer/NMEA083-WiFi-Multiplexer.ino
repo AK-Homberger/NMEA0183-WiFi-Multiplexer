@@ -39,8 +39,8 @@ const int udpPort = 4444;                 // UDP port
 
 
 #define MAX_NMEA0183_MESSAGE_SIZE 150
-char buf1[MAX_NMEA0183_MESSAGE_SIZE];  // Buffer for serial#1
-char buf2[MAX_NMEA0183_MESSAGE_SIZE];  // Buffer for serial#2
+char buf1[MAX_NMEA0183_MESSAGE_SIZE] = "";  // Buffer for serial#1
+char buf2[MAX_NMEA0183_MESSAGE_SIZE] = "";  // Buffer for serial#2
 
 // Create software serial objects
 SoftwareSerial swSer1;
@@ -199,7 +199,6 @@ bool GetNMEA0183Message2() {
   }
   return false;
 }
-
 
 
 //*****************************************************************************
