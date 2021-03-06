@@ -46,17 +46,6 @@ F 3 "~" H 1650 3350 50  0001 C CNN
 	1    1650 3350
 	-1   0    0    1   
 $EndComp
-$Comp
-L Interface_UART:MAX232 U2
-U 1 1 60437BD0
-P 4350 3800
-F 0 "U2" H 4350 5181 50  0000 C CNN
-F 1 "MAX232" H 4350 5090 50  0000 C CNN
-F 2 "" H 4400 2750 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/max232.pdf" H 4350 3900 50  0001 C CNN
-	1    4350 3800
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	5150 4300 5950 4300
 Wire Wire Line
@@ -110,12 +99,12 @@ $Comp
 L Device:CP C3
 U 1 1 60441930
 P 3200 3650
-F 0 "C3" H 3318 3696 50  0000 L CNN
-F 1 "1µ" H 3318 3605 50  0000 L CNN
+F 0 "C3" H 3082 3604 50  0000 R CNN
+F 1 "1µ" H 3082 3695 50  0000 R CNN
 F 2 "" H 3238 3500 50  0001 C CNN
 F 3 "~" H 3200 3650 50  0001 C CNN
 	1    3200 3650
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	2800 3500 2800 3400
@@ -125,8 +114,6 @@ Wire Wire Line
 	3200 3500 3550 3500
 Wire Wire Line
 	3550 3500 3550 3700
-Wire Wire Line
-	2800 3800 3200 3800
 Wire Wire Line
 	1850 3350 1850 3800
 Wire Wire Line
@@ -164,4 +151,17 @@ Wire Wire Line
 	2450 3250 2450 4300
 Wire Wire Line
 	2450 4300 3550 4300
+Wire Wire Line
+	2800 3800 3200 3800
+$Comp
+L Interface_UART:MAX232 U2
+U 1 1 60437BD0
+P 4350 3800
+F 0 "U2" H 4350 5181 50  0000 C CNN
+F 1 "MAX232" H 4350 5090 50  0000 C CNN
+F 2 "" H 4400 2750 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/max232.pdf" H 4350 3900 50  0001 C CNN
+	1    4350 3800
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
