@@ -24,5 +24,7 @@ const int udpPort = 4444;                 // UDP port
 
 ```
 
+If you only need one serial line ignore the parts for line two. If you need mor ports add lines and extend the code accordingly.
+
 ## Updates
 - 06.03.2021 - Version 0.1: Initial version
