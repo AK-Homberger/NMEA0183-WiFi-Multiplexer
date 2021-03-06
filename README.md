@@ -11,6 +11,7 @@ Works also with Navionics devices on tablets (configure UDP connection with Host
 Just change the settings in the [programm](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer/blob/main/NMEA083-WiFi-Multiplexer/NMEA083-WiFi-Multiplexer.ino) according to your needs:
 
 ```
+// Change these values only
 // ------------------------------------------------------------------------
 #define AP 0             // Set to 1 to act as Access Point, 0 as client 
 
@@ -21,7 +22,7 @@ const char *udpAddress = "192.168.4.255"; // Set network address for broadcast
 const int udpPort = 4444;                 // UDP port
 
 #define BaudRate1 4800   // Baud rate for serial#1
-#define BaudRate2 38400  // Baud rate for serial#1
+#define BaudRate2 38400  // Baud rate for serial#2
 
 // -------------------------------------------------------------------------
 
