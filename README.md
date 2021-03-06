@@ -4,7 +4,7 @@ Reads NMEA0183 messages from two serial (RS232) inputs and forwards multiplexed 
 The mupltiplexer is powered from USB connection.
 ESP8266 is using Software Serial on ports D7 and D8.
 
-Works also with Navionics devices on tablets (configure UDP connection with Host: x.y.z.255 and Port: 4444).
+Works also with Navionics apps on tablets (configure UDP connection with Host: x.y.z.255 and Port: 4444).
 
 ![Schematics](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer/blob/main/NMEA0183-WiFi-Multiplexer.png)
 
