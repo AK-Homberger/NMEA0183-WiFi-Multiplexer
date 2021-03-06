@@ -24,7 +24,7 @@ const int udpPort = 4444;                 // UDP port
 
 ```
 
-If you only need one serial line ignore the parts for line two. If you need mor ports add lines and extend the code accordingly.
+If you only need one serial input ignore the parts for input two. If you need more, add ports and extend the code accordingly.
 
 KiCad files are available to change/extend and to create a PCB.
 
