@@ -1,0 +1,108 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:WeMos_D1_mini U1
+U 1 1 604342F8
+P 6100 3950
+F 0 "U1" H 6100 4900 50  0000 C CNN
+F 1 "WeMos_D1_mini" H 6100 5000 50  0000 C CNN
+F 2 "Module:WEMOS_D1_mini_light" H 6100 2800 50  0001 C CNN
+F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H 4250 2800 50  0001 C CNN
+	1    6100 3950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q1
+U 1 1 6043679E
+P 4850 4450
+F 0 "Q1" H 5041 4496 50  0000 L CNN
+F 1 "BC547" H 5041 4405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5050 4375 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4850 4450 50  0001 L CNN
+	1    4850 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60437DBF
+P 4300 4450
+F 0 "R1" V 4093 4450 50  0000 C CNN
+F 1 "33K" V 4184 4450 50  0000 C CNN
+F 2 "" V 4230 4450 50  0001 C CNN
+F 3 "~" H 4300 4450 50  0001 C CNN
+	1    4300 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 60438826
+P 4550 4700
+F 0 "D?" V 4504 4779 50  0000 L CNN
+F 1 "1N4148" V 4595 4779 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4550 4525 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4550 4700 50  0001 C CNN
+	1    4550 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 60439978
+P 3800 4550
+F 0 "J1" H 3718 4225 50  0000 C CNN
+F 1 "NMEA In" H 3718 4316 50  0000 C CNN
+F 2 "" H 3800 4550 50  0001 C CNN
+F 3 "~" H 3800 4550 50  0001 C CNN
+	1    3800 4550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4000 4450 4150 4450
+Wire Wire Line
+	4000 4550 4000 4850
+Wire Wire Line
+	4000 4850 4550 4850
+Wire Wire Line
+	4950 4650 4950 4850
+Connection ~ 4950 4850
+Wire Wire Line
+	4950 4250 5700 4250
+Connection ~ 4550 4850
+Wire Wire Line
+	4450 4450 4550 4450
+Wire Wire Line
+	4550 4850 4950 4850
+Wire Wire Line
+	4550 4550 4550 4450
+Connection ~ 4550 4450
+Wire Wire Line
+	4550 4450 4650 4450
+Wire Wire Line
+	6100 4750 6100 4850
+Wire Wire Line
+	4950 4850 6100 4850
+$Comp
+L power:GND #PWR?
+U 1 1 6043BBF4
+P 6100 4850
+F 0 "#PWR?" H 6100 4600 50  0001 C CNN
+F 1 "GND" H 6105 4677 50  0000 C CNN
+F 2 "" H 6100 4850 50  0001 C CNN
+F 3 "" H 6100 4850 50  0001 C CNN
+	1    6100 4850
+	1    0    0    -1  
+$EndComp
+Connection ~ 6100 4850
+$EndSCHEMATC
