@@ -84,7 +84,7 @@ boolean connectWifi() {
 
   if (AP == 0) {
     WiFi.mode(WIFI_STA);
-    WiFi.hostname("HeaterControl");
+    WiFi.hostname("NMEA0183Multiplexer");
     WiFi.begin(ssid, password);
     Serial.println("Connecting to WiFi");
     // Wait for connection
