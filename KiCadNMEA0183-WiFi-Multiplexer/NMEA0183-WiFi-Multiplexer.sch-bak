@@ -164,4 +164,27 @@ F 3 "http://www.ti.com/lit/ds/symlink/max232.pdf" H 4350 3900 50  0001 C CNN
 	1    4350 3800
 	-1   0    0    -1  
 $EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60437FA3
+P 6150 2600
+F 0 "#PWR?" H 6150 2450 50  0001 C CNN
+F 1 "+5V" H 6165 2773 50  0000 C CNN
+F 2 "" H 6150 2600 50  0001 C CNN
+F 3 "" H 6150 2600 50  0001 C CNN
+	1    6150 2600
+	1    0    0    -1  
+$EndComp
+Connection ~ 6150 2600
+$Comp
+L power:GND #PWR?
+U 1 1 60438682
+P 4350 5150
+F 0 "#PWR?" H 4350 4900 50  0001 C CNN
+F 1 "GND" H 4355 4977 50  0000 C CNN
+F 2 "" H 4350 5150 50  0001 C CNN
+F 3 "" H 4350 5150 50  0001 C CNN
+	1    4350 5150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

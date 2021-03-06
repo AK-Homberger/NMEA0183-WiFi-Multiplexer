@@ -25,10 +25,10 @@ F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H 5200 2950 50  00
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J1
+L Connector_Generic:Conn_01x02 J2
 U 1 1 60439978
 P 1650 4600
-F 0 "J1" H 1568 4275 50  0000 C CNN
+F 0 "J2" H 1568 4275 50  0000 C CNN
 F 1 "NMEA In" H 1568 4366 50  0000 C CNN
 F 2 "" H 1650 4600 50  0001 C CNN
 F 3 "~" H 1650 4600 50  0001 C CNN
@@ -36,10 +36,10 @@ F 3 "~" H 1650 4600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J2
+L Connector_Generic:Conn_01x02 J1
 U 1 1 6043EB08
 P 1650 3350
-F 0 "J2" H 1568 3025 50  0000 C CNN
+F 0 "J1" H 1568 3025 50  0000 C CNN
 F 1 "NMEA In" H 1568 3116 50  0000 C CNN
 F 2 "" H 1650 3350 50  0001 C CNN
 F 3 "~" H 1650 3350 50  0001 C CNN
