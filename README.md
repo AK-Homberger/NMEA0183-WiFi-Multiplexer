@@ -1,6 +1,9 @@
 # NMEA0183 WiFi Multiplexer with ESP8266 (D1 Mini)
 Reads NMEA0183 messages from two serial (RS232) inputs and forwards multiplexed messages to USB-Serial and WLAN as UDP broadcast.
 
+Works also with Navionics devices on tablets (configure UDP connection with Host: x.y.z.255 and Port: 4444).
+
+The mupltiplexer is powered from USB connection.
 ESP8266 is using Software Serial on ports D7 and D8.
 
 ![Schematics](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer/blob/main/NMEA0183-WiFi-Multiplexer.png)
