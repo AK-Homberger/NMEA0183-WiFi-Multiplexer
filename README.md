@@ -40,6 +40,7 @@ KiCad files are available to change/extend and to create a [PCB](https://github.
 - [Max232](https://www.reichelt.de/de/en/rs232-driver-dil-16-max-232-cpe-p11216.html?&nbc=1)
 - 4* [Capacitor 1µF](https://www.reichelt.de/de/en/tantalum-capacitor-rm-2-5-1-0-f-35-v-tantal-1-0-35-p20330.html?&nbc=1)
 - 2* [Connector](https://www.reichelt.de/de/en/2-pin-terminal-strip-spacing-5-08-akl-101-02-p36605.html?&nbc=1)
+- [DC-DC Converter](https://www.reichelt.de/de/en/dc-dc-converter-5-v-1-a-single-r-78e50-10-p177268.html?&nbc=1)
 - [Board](https://aisler.net/p/EZUNBBJG) @Aisler.net
 
 ## Updates
