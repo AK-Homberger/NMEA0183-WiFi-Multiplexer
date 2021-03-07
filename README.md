@@ -30,6 +30,8 @@ const int udpPort = 4444;                 // UDP port
 
 KiCad files are available to change/extend and to create a PCB.
 
+![PCB](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer/blob/main/KiCadNMEA0183-WiFi-Multiplexer/PCB.pdf)
+
 ## Parts
 
 - [ESP8266 (D1Mini)](https://www.reichelt.de/de/en/d1-mini-esp8266-v3-0-d1-mini-p253978.html?&nbc=1)
