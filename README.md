@@ -39,7 +39,7 @@ KiCad files are available to change/extend and to create a [PCB](https://github.
 - [Max232](https://www.reichelt.de/de/en/rs232-driver-dil-16-max-232-cpe-p11216.html?&nbc=1)
 - 4* [Capacitor 1µF](https://www.reichelt.de/de/en/tantalum-capacitor-rm-2-5-1-0-f-35-v-tantal-1-0-35-p20330.html?&nbc=1)
 - 2* [Connector](https://www.reichelt.de/de/en/2-pin-terminal-strip-spacing-5-08-akl-101-02-p36605.html?&nbc=1)
-- [Board](https://www.reichelt.de/de/en/breadboard-laminated-paper-50x100-mm-h25pr050-p8268.html?GROUPID=7785&START=0&OFFSET=16&SID=96Xk5YJngRlij1C8dm7WFa8cc43c9fd0145a715a7ea5bf81fdb75&LANGUAGE=EN&&r=1)
+- [Board](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer/blob/main/KiCadNMEA0183-WiFi-Multiplexer/PCB.pdf)
 
 ## Updates
 - 06.03.2021 - Version 0.1: Initial version
