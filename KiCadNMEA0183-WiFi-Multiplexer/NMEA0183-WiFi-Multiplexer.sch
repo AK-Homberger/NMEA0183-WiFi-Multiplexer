@@ -117,7 +117,7 @@ Wire Wire Line
 Wire Wire Line
 	1850 3350 1850 3800
 Wire Wire Line
-	1850 3800 2800 3800
+	1850 3800 2600 3800
 Connection ~ 2800 3800
 Wire Wire Line
 	1850 4600 2800 4600
@@ -187,4 +187,47 @@ F 3 "" H 4350 5150 50  0001 C CNN
 	1    4350 5150
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 6044E52D
+P 1650 2600
+F 0 "J3" H 1568 2275 50  0000 C CNN
+F 1 "Power" H 1568 2366 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1650 2600 50  0001 C CNN
+F 3 "~" H 1650 2600 50  0001 C CNN
+	1    1650 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Regulator_Linear:LM7805_TO220 U3
+U 1 1 6044EDD0
+P 2400 2500
+F 0 "U3" H 2400 2742 50  0000 C CNN
+F 1 "R-78E50-10_TO220" H 2400 2651 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 2400 2725 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 2400 2450 50  0001 C CNN
+	1    2400 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2500 2100 2500
+Wire Wire Line
+	2400 2800 2600 2800
+Wire Wire Line
+	2600 2800 2600 3800
+Connection ~ 2600 3800
+Wire Wire Line
+	2600 3800 2800 3800
+Wire Wire Line
+	2700 2500 3400 2500
+Wire Wire Line
+	3400 2500 3400 2600
+Wire Wire Line
+	3400 2600 4350 2600
+Connection ~ 4350 2600
+Wire Wire Line
+	1850 2600 1850 2800
+Wire Wire Line
+	1850 2800 2400 2800
+Connection ~ 2400 2800
 $EndSCHEMATC
