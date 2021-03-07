@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 10)
+    (drawings 9)
     (tracks 72)
     (zones 0)
     (modules 8)
@@ -311,7 +311,7 @@
     )
   )
 
-  (module Module:WEMOS_D1_mini_light (layer F.Cu) (tedit 5BBFB1CE) (tstamp 60453791)
+  (module Module:WEMOS_D1_mini_light (layer F.Cu) (tedit 5BBFB1CE) (tstamp 6044CD57)
     (at 95.25 95.25 270)
     (descr "16-pin module, column spacing 22.86 mm (900 mils), https://wiki.wemos.cc/products:d1:d1_mini, https://c1.staticflickr.com/1/734/31400410271_f278b087db_z.jpg")
     (tags "ESP8266 WiFi microcontroller")
@@ -1098,9 +1098,6 @@
     )
   )
 
-  (gr_text "NMEA0183 WiFi\nMultiplexer\nRev 1.0" (at 78.74 102.87) (layer F.SilkS)
-    (effects (font (size 1.5 1.5) (thickness 0.3)))
-  )
   (gr_circle (center 105.41 121.92) (end 106.045 121.92) (layer Edge.Cuts) (width 0.05))
   (gr_circle (center 105.41 69.215) (end 106.045 69.215) (layer Edge.Cuts) (width 0.05))
   (gr_circle (center 67.945 121.92) (end 67.945 121.285) (layer Edge.Cuts) (width 0.05) (tstamp 60450DC9))
