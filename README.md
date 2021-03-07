@@ -28,9 +28,10 @@ const int udpPort = 4444;                 // UDP port
 
 ```
 
-KiCad files are available to change/extend and to create a PCB.
+KiCad files are available to change/extend and to create a [PCB](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer/blob/main/KiCadNMEA0183-WiFi-Multiplexer/PCB.pdf).
 
-![PCB](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer/blob/main/KiCadNMEA0183-WiFi-Multiplexer/PCB.pdf)
+![Board](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer/blob/main/KiCadNMEA0183-WiFi-Multiplexer/NMEA0183-WiFi-Multiplexer.png)
+
 
 ## Parts
 
