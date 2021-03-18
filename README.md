@@ -1,7 +1,7 @@
 # NMEA0183 WiFi Multiplexer with ESP8266 (D1 Mini)
 Reads NMEA0183 messages from two serial (RS232) inputs and forwards multiplexed messages to USB-Serial and WLAN as UDP broadcast.
 
-The mupltiplexer is powered either from USB connection or with 12 Volt via DC-DC converter.
+The multiplexer is powered either from USB connection or with 12 Volt via DC-DC converter.
 ESP8266 is using Software Serial on ports D7 and D8.
 
 Main purpose is to provide GPS and AIS information wirelessly to a tablet/smartphone for navigation.
