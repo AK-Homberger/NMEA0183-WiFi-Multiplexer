@@ -1,4 +1,7 @@
 # NMEA0183 WiFi Multiplexer with ESP8266 (D1 Mini)
+
+# Caution! Use of D8 creates boot problem (see Issues). I will change this to D6. 
+
 Reads NMEA0183 messages from two serial (RS232) inputs and forwards multiplexed messages to USB-Serial and WLAN as UDP broadcast.
 
 The multiplexer is powered either from USB connection or with 12 Volt via DC-DC converter.
