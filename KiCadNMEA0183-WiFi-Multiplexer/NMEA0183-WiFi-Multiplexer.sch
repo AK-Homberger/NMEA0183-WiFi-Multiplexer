@@ -46,14 +46,6 @@ F 3 "~" H 1650 3350 50  0001 C CNN
 	1    1650 3350
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5150 4300 5950 4300
-Wire Wire Line
-	5950 4300 5950 4400
-Wire Wire Line
-	5950 4400 6650 4400
-Wire Wire Line
-	5150 4500 6650 4500
 $Comp
 L Device:CP C2
 U 1 1 6043F041
@@ -230,4 +222,12 @@ Wire Wire Line
 Wire Wire Line
 	1850 2800 2400 2800
 Connection ~ 2400 2800
+Wire Wire Line
+	5150 4300 6650 4300
+Wire Wire Line
+	5150 4500 5700 4500
+Wire Wire Line
+	5700 4500 5700 4400
+Wire Wire Line
+	5700 4400 6650 4400
 $EndSCHEMATC
