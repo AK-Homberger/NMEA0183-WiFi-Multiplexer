@@ -12,10 +12,10 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 // NMEA0183 WiFi Multiplexer
-// Reads NMEA0183 messages from serial connected to D7 and D8.
+// Reads NMEA0183 messages from serial connected to D6 and D7.
 // Forwards multiplexed messages to USB-Serial and WLAN as UDP broadcast.
 
-// Version 0.1, 06.03.2021, AK-Homberger
+// Version 0.2, 01.10.2021, AK-Homberger
 
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
@@ -27,7 +27,7 @@
 #define AP 0             // Set to 1 to act as Access Point, 0 as client 
 
 const char *ssid      = "ssid";           // Set WLAN name
-const char *password  = "password";      // Set password
+const char *password  = "password";       // Set password
 
 const char *udpAddress = "192.168.4.255"; // Set network address for broadcast
 const int udpPort = 4444;                 // UDP port
@@ -67,10 +67,10 @@ void setup(void) {
   }
 
   // Initialise software serial set baud rate to 4800 or 38400
-  swSer1.begin(BaudRate1, SWSERIAL_8N1, D7, D7, false, 256);
+  swSer1.begin(BaudRate1, SWSERIAL_8N1, D6, D6, false, 256);
   swSer1.enableIntTx(false);
 
-  swSer2.begin(BaudRate2, SWSERIAL_8N1, D8, D8, false, 256);
+  swSer2.begin(BaudRate2, SWSERIAL_8N1, D7, D7, false, 256);
   swSer2.enableIntTx(false);
 }
 
