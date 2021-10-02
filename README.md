@@ -1,11 +1,15 @@
 # NMEA0183 WiFi Multiplexer with ESP8266 (D1 Mini)
 
-# Caution! Updated version (0.2) with pins changed from D7/D8 to D6/D7 (see Issues).
+# Caution! 
+# ----------------------------
+This is an updated version (0.2) with pins changed from D7/D8 to D6/D7 to avoid boot problems (see Issues).
+If you ordered already a version 1.0 PCB, then just cut the connection to D8 (e.g. with a knife) and solder a wire to D6 pin on D1 Mini. The updated software (version 0.2) will work then. But with changed serial line numbers from #1 to #2 and vice versa.
+# ----------------------------
 
-Reads NMEA0183 messages from two serial (RS232) inputs and forwards multiplexed messages to USB-Serial and WLAN as UDP broadcast.
+The project reads NMEA0183 messages from two serial (RS232) inputs and forwards multiplexed messages to USB-Serial and WLAN as UDP broadcast.
 
 The multiplexer is powered either from USB connection or with 12 Volt via DC-DC converter.
-ESP8266 is using Software Serial on ports D7 and D8.
+ESP8266 is using Software Serial on ports D6 and D7.
 
 Main purpose is to provide GPS and AIS information wirelessly to a tablet/smartphone for navigation.
 Works with Navionics app (configure UDP connection with Host: x.y.z.255 and Port: 4444).
