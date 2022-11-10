@@ -51,5 +51,6 @@ KiCad files are available to change/extend and to create a [PCB](https://github.
 - [Board](https://aisler.net/p/EZUNBBJG) @Aisler.net
 
 ## Updates
+- 10.11.2022 - Version 0.3: Corrected line end handling to avaid duplication of messages sent (see Issues).
 - 01.10.2021 - Version 0.2: Changed pins from D/D8 to D6/D7 to avoid boot problems (see Issues).
 - 06.03.2021 - Version 0.1: Initial version
