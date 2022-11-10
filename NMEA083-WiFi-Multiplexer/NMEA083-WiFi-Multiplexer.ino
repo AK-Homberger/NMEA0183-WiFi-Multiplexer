@@ -15,7 +15,7 @@
 // Reads NMEA0183 messages from serial connected to D6 and D7.
 // Forwards multiplexed messages to USB-Serial and WLAN as UDP broadcast.
 
-// Version 0.2, 01.10.2021, AK-Homberger
+// Version 0.3, 10.11.2022, AK-Homberger
 
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
@@ -158,6 +158,9 @@ bool GetNMEA0183Message1() {
   while (swSer1.available()) {
     Char = swSer1.read();
 
+    if (ReceivedChars == 0 && (Char == '\r')) return false;
+    if (ReceivedChars == 0 && (Char == '\n')) return false;
+
     if ( (Char == '\n') || (Char == '\r') ) {
       ReceivedChars = 0;
       return true;
@@ -182,6 +185,9 @@ bool GetNMEA0183Message2() {
 
   while (swSer2.available()) {
     Char = swSer2.read();
+
+    if (ReceivedChars == 0 && (Char == '\r')) return false;
+    if (ReceivedChars == 0 && (Char == '\n')) return false;
 
     if ( (Char == '\n') || (Char == '\r') ) {
       ReceivedChars = 0;
