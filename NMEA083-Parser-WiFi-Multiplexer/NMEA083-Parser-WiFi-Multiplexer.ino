@@ -183,8 +183,7 @@ void loop(void) {
           (strcmp(NMEA0183Msg.Sender(), "GL") == 0) && NMEA0183Msg.IsMessageCode("GSV"))) { 
 
       if (NMEA0183Msg.GetMessage(buf, MAX_NMEA0183_MESSAGE_SIZE - 1)) {
-        strcat(buf, "\n");
-        SendNMEA0183Message(buf);    // Send to clients
+         SendNMEA0183Message(buf);    // Send to clients
       }
     }
   }
@@ -192,8 +191,7 @@ void loop(void) {
   // Receive and send without modification
   if (NMEA0183_2.GetMessage(NMEA0183Msg)) {    // Get NMEA sentences from serial#2
     if (NMEA0183Msg.GetMessage(buf, MAX_NMEA0183_MESSAGE_SIZE - 1)) {
-      strcat(buf, "\n");
-      SendNMEA0183Message(buf);    // Send to clients
+       SendNMEA0183Message(buf);    // Send to clients
     }
   }
 }
