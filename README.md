@@ -14,7 +14,7 @@ ESP8266 is using Software Serial on ports D6 and D7.
 Main purpose is to provide GPS and AIS information wirelessly to a tablet/smartphone for navigation.
 Works with Navionics app (configure UDP connection with Host: x.y.z.255 and Port: 4444).
 
-There is also a software version that is parsing the messages and can suppress certain messages. But the code is currently not tested due to missing hardware to test. This version needs this additional NMEA0183 libray: https://github.com/ttlappalainen/NMEA0183
+There is also a software version that is parsing the messages and can suppress certain messages. This version needs this additional NMEA0183 libray: https://github.com/ttlappalainen/NMEA0183
 
 ![Schematics](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer/blob/main/NMEA0183-WiFi-Multiplexer.png)
 
