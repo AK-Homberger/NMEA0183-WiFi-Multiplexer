@@ -11,7 +11,7 @@
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-// NMEA0183 WiFi Multiplexer with NME0183 Message Parser to suppress certain messges
+// NMEA0183 WiFi Multiplexer with NME0183 Message Parser to suppress or parse certain messages
 
 // Reads NMEA0183 messages from serial connected to D6 and D7.
 // Forwards multiplexed messages to USB-Serial and WLAN as UDP broadcast.
@@ -22,11 +22,12 @@
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
 #include <SoftwareSerial.h>
-#include <NMEA0183.h> 
+#include <NMEA0183.h>
+#include <NMEA0183Messages.h>
 
 // Change these values only
 // ------------------------------------------------------------------------
-#define AP 0             // Set to 1 to act as Access Point, 0 as client 
+#define AP 1             // Set to 1 to act as Access Point, 0 as client 
 
 const char *ssid      = "ssid";           // Set WLAN name
 const char *password  = "password";       // Set password
@@ -35,7 +36,7 @@ const char *udpAddress = "192.168.4.255"; // Set network address for broadcast
 const int udpPort = 4444;                 // UDP port
 
 #define BaudRate1 4800   // Baud rate for serial#1
-#define BaudRate2 38400  // Baud rate for serial#2
+#define BaudRate2 4800   // Baud rate for serial#2
 
 // -------------------------------------------------------------------------
 
@@ -166,7 +167,20 @@ void SendNMEA0183Message(char *buf) {
   udp.println(buf);
   udp.endPacket();
 
-  Serial.println(buf);    // Send to USB-Serial
+  //Serial.println(buf);    // Send to USB-Serial. Uncomment if needed
+}
+
+
+//*****************************************************************************
+void HandleMWV(const tNMEA0183Msg &NMEA0183Msg) {
+  double WindAngle;
+  tNMEA0183WindReference Reference;
+  double WindSpeed;
+
+  // Parse MWV message (WindSpeed is in m/s !!!)
+  if (!NMEA0183ParseMWV_nc(NMEA0183Msg, WindAngle, Reference, WindSpeed)) return;
+
+  Serial.printf("Angle=%4.1f°, Speeed=%3.1f kn \n", WindAngle, WindSpeed*3600L/1852.0L);
 }
 
 
@@ -178,20 +192,21 @@ void loop(void) {
 
   // Receive and check message codes to suppress
   if (NMEA0183_1.GetMessage(NMEA0183Msg)) {    // Get NMEA sentences from serial#1
-    
+
     if (!((strcmp(NMEA0183Msg.Sender(), "GP") == 0) && NMEA0183Msg.IsMessageCode("GSV") ||
-          (strcmp(NMEA0183Msg.Sender(), "GL") == 0) && NMEA0183Msg.IsMessageCode("GSV"))) { 
+          (strcmp(NMEA0183Msg.Sender(), "GL") == 0) && NMEA0183Msg.IsMessageCode("GSV"))) {
 
       if (NMEA0183Msg.GetMessage(buf, MAX_NMEA0183_MESSAGE_SIZE - 1)) {
-         SendNMEA0183Message(buf);    // Send to clients
+        SendNMEA0183Message(buf);    // Send to clients
       }
     }
   }
 
-  // Receive and send without modification
+  // Receive and send without modification. And parse/display wind information (MWV)
   if (NMEA0183_2.GetMessage(NMEA0183Msg)) {    // Get NMEA sentences from serial#2
     if (NMEA0183Msg.GetMessage(buf, MAX_NMEA0183_MESSAGE_SIZE - 1)) {
-       SendNMEA0183Message(buf);    // Send to clients
+      SendNMEA0183Message(buf);    // Send to clients
     }
+  if (NMEA0183Msg.IsMessageCode("MWV")) HandleMWV(NMEA0183Msg);  // Check and handle message 
   }
 }
